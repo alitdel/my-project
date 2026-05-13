@@ -4,36 +4,67 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DRUG AWERENESS SYSTEM</title>
-  <link rel="stylesheet" href="./h.css">
+  <link rel="stylesheet" href="./styling.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
   <div class="banner">
      <img src="./assets/logo.jpeg" alt="logo" class="logo">
-    <h1><b><i>DRUG AWARENESS SYSTEM</i></b></h1>
+    <h1><img src="./assets/logo.jpeg" alt="logo" class="logo-inline"> <b><i>DRUG DRUG</i></b> AWARENESS <b><i>SYSTEM</i></b> <img src="./assets/logo.jpeg" alt="logo" class="logo-inline"></h1>
      <div class="menu-toggle" onclick="toggle-menu()"><img src="./assets/menu.jpeg/"></div>
      <nav class="nav-bar">
        <ul>
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="./about.html">About</a></li>
-          <li><a href="./services.html">Services</a></li>
-          <li><a href="./contact.html">Contact</a></li>
+          <li><a href="./index.html">🏠Home</a></li>
+          <li><a href="./about.html">ℹ️About</a></li>
+          <li><a href="./services.html">💼Services</a></li>
+          <li><a href="./stories.html">📖Stories</a></li>
+          <li><a href="./contacts.html">📞Contacts</a></li>
        </ul>
      </nav>
 
      <div class="search">
         <input type="text" placeholder="Search...">
-        <button class="btn">Search</button>
+        <button class="btn"> 🔍Search</button>
      </div>
   </div>
 </header>
     <section class="hero">
     <h2>SAY NO TO DRUG ABUSE</h2>
       <p>Building a safe,informed drug free society,through awareness,counseling  and reporting </p>
-    <img src="./assets/home back ground.jpeg" class="drug abuse-img"><br>
-     <button class="btn primary" >Learn More </button>        
-      <button class="primary">report cases</button>
+      <div class="slider-container">
+        <div class="slider-nav">
+          <button class="slider-btn" id="prevBtn" onclick="prevSlide()">← Previous</button>
+          <span class="slide-counter"><span id="currentSlide">1</span> / 4</span>
+          <button class="slider-btn" id="nextBtn" onclick="nextSlide()">Next →</button>
+        </div>
+        <div class="drug-types" id="sliderWrapper">
+          <div class="drug-card">
+            <img src="./assets/drug.jpeg" alt="Marijuana">
+            <div class="drug-type">🌿Marijuana</div>
+            <div class="drug-footer">Cause impaired judgement risks</div>
+          </div>
+          <div class="drug-card">
+            <img src="./assets/istockphoto-639201224-612x612.jpg" alt="Tobacco">
+            <div class="drug-type">🚬Tobacco</div>
+            <div class="drug-footer">Affects lungs, brain, death risks</div>
+          </div>
+          <div class="drug-card">
+            <img src="./assets/ALCOHOL.jpeg" alt="Alcohol">
+            <div class="drug-type">🍷Alcohol</div>
+            <div class="drug-footer">Impairs coordination and health</div>
+          </div>
+          <div class="drug-card">
+            <img src="./assets/HEALING.png" alt="Injectable Drugs">
+            <div class="drug-type">💉Injectable Drugs</div>
+            <div class="drug-footer">High risk of infection and addiction</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-buttons">
+        <button class="btn primary">Learn More</button>
+        <button class="primary">report cases</button>
+      </div>
   </section>
   <div class="stat-grid">
   <div class="card">
@@ -67,11 +98,12 @@
     <h3><img src="./assets/FOLLOW US.jpeg" class="icon"> Links</h3>
     <ul>
       <li><a href="./index.html" class="active">🏠Home</a></li>
-      <li><a href="./about us.html">📖About</a></li>
+      <li><a href="./about.html">📖About</a></li>
       <li><a href="./services.html">Services</a></li>
+      <li><a href="./stories.html">Stories</a></li>
       <li><a href="./awereness.html">🎗️awereness</a></li>
       <li> <a href="./resources.html">resources</a></li>
-      <li><a href="./contact.html">📱contact</a></li>
+      <li><a href="./contacts.html">📱contacts</a></li>
       <li><a href="./FAQ.html">FAQ</a></li>
       <li><a href="./help center.html">help center</a></li>
         
@@ -116,5 +148,39 @@
      </div>
      </footer>
      
+<script>
+let currentSlideIndex = 1;
+const totalSlides = 4;
+
+function updateSlider() {
+  const cards = document.querySelectorAll('.drug-card');
+  const itemsPerView = window.innerWidth >= 1200 ? 4 : (window.innerWidth >= 768 ? 2 : 1);
+  const maxIndex = Math.max(1, totalSlides - itemsPerView + 1);
+  
+  if (currentSlideIndex < 1) currentSlideIndex = 1;
+  if (currentSlideIndex > maxIndex) currentSlideIndex = maxIndex;
+  
+  document.getElementById('currentSlide').textContent = currentSlideIndex;
+  document.getElementById('prevBtn').disabled = currentSlideIndex === 1;
+  document.getElementById('nextBtn').disabled = currentSlideIndex === maxIndex;
+  
+  const offset = (currentSlideIndex - 1) * 100 / itemsPerView;
+  const sliderWrapper = document.getElementById('sliderWrapper');
+  sliderWrapper.style.transform = `translateX(-${offset}%)`;
+}
+
+function nextSlide() {
+  currentSlideIndex++;
+  updateSlider();
+}
+
+function prevSlide() {
+  currentSlideIndex--;
+  updateSlider();
+}
+
+window.addEventListener('resize', updateSlider);
+updateSlider();
+</script>
 </body>
 </html>
