@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DRUG AWERENESS SYSTEM</title>
+  <title>DRUG  ABUSE AWERENESS SYSTEM</title>
   <link rel="stylesheet" href="./styling.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -12,11 +12,12 @@
   <div class="banner">
      <img src="./assets/logo.jpeg" alt="logo" class="logo">
     <h1><img src="./assets/logo.jpeg" alt="logo" class="logo-inline"> <b><i>DRUG DRUG</i></b> AWARENESS <b><i>SYSTEM</i></b> <img src="./assets/logo.jpeg" alt="logo" class="logo-inline"></h1>
-     <div class="menu-toggle" onclick="toggle-menu()"><img src="./assets/menu.jpeg/"></div>
+     <div class="menu-toggle" onclick="toggle-menu()"><img src="./assets/menu.jpeg" alt="Menu"></div>
      <nav class="nav-bar">
        <ul>
           <li><a href="./index.html">🏠Home</a></li>
           <li><a href="./about.html">ℹ️About</a></li>
+          <li><a href="./awareness.html">📢Awareness</a></li>
           <li><a href="./services.html">💼Services</a></li>
           <li><a href="./stories.html">📖Stories</a></li>
           <li><a href="./contacts.html">📞Contacts</a></li>
@@ -32,33 +33,14 @@
     <section class="hero">
     <h2>SAY NO TO DRUG ABUSE</h2>
       <p>Building a safe,informed drug free society,through awareness,counseling  and reporting </p>
-      <div class="slider-container">
-        <div class="slider-nav">
-          <button class="slider-btn" id="prevBtn" onclick="prevSlide()">← Previous</button>
-          <span class="slide-counter"><span id="currentSlide">1</span> / 4</span>
-          <button class="slider-btn" id="nextBtn" onclick="nextSlide()">Next →</button>
+      <div class="hero-features">
+        <div class="feature-card">
+          <h3>Healthy Choices</h3>
+          <p>Empowering people with easy-to-use resources, clear guidance, and caring support.</p>
         </div>
-        <div class="drug-types" id="sliderWrapper">
-          <div class="drug-card">
-            <img src="./assets/drug.jpeg" alt="Marijuana">
-            <div class="drug-type">🌿Marijuana</div>
-            <div class="drug-footer">Cause impaired judgement risks</div>
-          </div>
-          <div class="drug-card">
-            <img src="./assets/istockphoto-639201224-612x612.jpg" alt="Tobacco">
-            <div class="drug-type">🚬Tobacco</div>
-            <div class="drug-footer">Affects lungs, brain, death risks</div>
-          </div>
-          <div class="drug-card">
-            <img src="./assets/ALCOHOL.jpeg" alt="Alcohol">
-            <div class="drug-type">🍷Alcohol</div>
-            <div class="drug-footer">Impairs coordination and health</div>
-          </div>
-          <div class="drug-card">
-            <img src="./assets/HEALING.png" alt="Injectable Drugs">
-            <div class="drug-type">💉Injectable Drugs</div>
-            <div class="drug-footer">High risk of infection and addiction</div>
-          </div>
+        <div class="feature-card">
+          <h3>Community Support</h3>
+          <p>Report concerns, access local help, and join a safer, drug-free network.</p>
         </div>
       </div>
       <div class="hero-buttons">
@@ -66,6 +48,33 @@
         <button class="primary">report cases</button>
       </div>
   </section>
+
+  <section class="drug-section">
+    <h2>Key Awareness Stories</h2>
+    <div class="drug-types">
+      <div class="drug-card">
+        <img src="./assets/drug.jpeg" alt="Marijuana">
+        <div class="drug-type">🌿 Marijuana</div>
+        <div class="drug-footer">Impaired judgment, lung risks, and memory effects.</div>
+      </div>
+      <div class="drug-card">
+        <img src="./assets/istockphoto-639201224-612x612.jpg" alt="Tobacco">
+        <div class="drug-type">🚬 Tobacco</div>
+        <div class="drug-footer">Lung damage and long-term health consequences.</div>
+      </div>
+      <div class="drug-card">
+        <img src="./assets/ALCOHOL.jpeg" alt="Alcohol">
+        <div class="drug-type">🍷 Alcohol</div>
+        <div class="drug-footer">High risk of addiction, accidents, and organ damage.</div>
+      </div>
+      <div class="drug-card">
+        <img src="./assets/HEALING.png" alt="Healing">
+        <div class="drug-type">❤️ Recovery</div>
+        <div class="drug-footer">Support, counseling, and the journey to a drug-free life.</div>
+      </div>
+    </div>
+  </section>
+
   <div class="stat-grid">
   <div class="card">
     <h3>30%</h3>
@@ -101,7 +110,7 @@
       <li><a href="./about.html">📖About</a></li>
       <li><a href="./services.html">Services</a></li>
       <li><a href="./stories.html">Stories</a></li>
-      <li><a href="./awereness.html">🎗️awereness</a></li>
+      <li><a href="./awareness.html">📢Awareness</a></li>
       <li> <a href="./resources.html">resources</a></li>
       <li><a href="./contacts.html">📱contacts</a></li>
       <li><a href="./FAQ.html">FAQ</a></li>
