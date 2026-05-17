@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ | Drug Abuse Awareness</title>
+  <link rel="stylesheet" href="./styling.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="banner">
+      <div class="brand">
+        <img src="./assets/logo.jpeg" alt="logo" class="logo">
+        <h1><b><i>DRUG</i></b> AWARENESS <b><i>SYSTEM</i></b></h1>
+        <img src="./assets/logo.jpeg" alt="logo" class="logo">
+      </div>
+      <div class="menu-toggle" onclick="toggleMenu()"><img src="./assets/menu.jpeg" alt="Menu"></div>
+      <nav class="nav-bar">
+        <ul>
+          <li><a href="./index.html">🏠Home</a></li>
+          <li><a href="./about.html">ℹ️About</a></li>
+          <li><a href="./awareness.html">📢Awareness</a></li>
+          <li><a href="./services.html">💼Services</a></li>
+          <li><a href="./stories.html">📖Stories</a></li>
+          <li><a href="./resources.html">📚Resources</a></li>
+          <li><a href="./FAQ.html">❓FAQ</a></li>
+          <li><a href="./contacts.html">📞Contacts</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="page-content">
+    <section class="page-section">
+      <h2>Frequently Asked Questions</h2>
+      <p>Find quick answers to the most important questions about drug awareness, recovery, and how to find help.</p>
+      <div class="faq-list">
+        <details>
+          <summary>What are the first signs of drug abuse?</summary>
+          <p>Common signs include sudden mood changes, withdrawal from family or friends, poor personal hygiene, and changes in sleeping or eating habits.</p>
+        </details>
+        <details>
+          <summary>How can I help someone who is struggling?</summary>
+          <p>Offer support without judgement, encourage professional help, and connect them with trusted resources or support groups.</p>
+        </details>
+        <details>
+          <summary>Where can I get immediate help?</summary>
+          <p>Contact local hotlines, health clinics, or community support centers. If in danger, call emergency services immediately.</p>
+        </details>
+        <details>
+          <summary>Can drug addiction be treated?</summary>
+          <p>Yes. Treatment options include counseling, medical support, recovery programs, peer support groups, and long-term follow-up care.</p>
+        </details>
+        <details>
+          <summary>How do I join a recovery program?</summary>
+          <p>Speak with a healthcare professional or counselor who can recommend programs based on your location, needs, and level of support.</p>
+        </details>
+        <details>
+          <summary>Is it safe to talk to someone anonymously?</summary>
+          <p>Yes. Many hotlines and support services provide anonymous help so you can get advice without sharing personal details.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h2>Need More Support?</h2>
+        <p>Explore our resources page for additional tools, or contact our team for help with your next step.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./resources.html">Resources</a></li>
+          <li><a href="./contacts.html">Contacts</a></li>
+          <li><a href="./about.html">About</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <p>📞 (123) 456-7890</p>
+        <p>alinaitwedorothy15@gmail.com</p>
+      </div>
+    </div>
+    <div class="footer-alert">
+      <p>Take action today. Share knowledge, seek support, and help build safer communities.</p>
+      <input type="email" placeholder="Enter your email">
+      <button class="btn">Subscribe</button>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 DRUG AWARENESS SYSTEM. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+<script>
+function toggleMenu() {
+  const nav = document.querySelector('.nav-bar');
+  if (!nav) return;
+  nav.classList.toggle('open');
+}
+</script>
+</body>
+</html>
