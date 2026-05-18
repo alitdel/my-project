@@ -10,9 +10,12 @@
 <body>
   <header>
     <div class="banner">
-      <img src="./assets/logo.jpeg" alt="logo" class="logo">
-      <h1><img src="./assets/logo.jpeg" alt="logo" class="logo-inline"> <b><i>DRUG ABUSE</i></b> AWARENESS <b><i>SYSTEM</i></b> <img src="./assets/logo.jpeg" alt="logo" class="logo-inline"></h1>
-      <div class="menu-toggle" onclick="toggle-menu()"><img src="./assets/menu.jpeg" alt="Menu"></div>
+      <div class="brand">
+        <img src="./assets/logo.jpeg" alt="logo" class="logo">
+        <h1><b><i>DRUG ABUSE</i></b> AWARENESS <b><i>SYSTEM</i></b></h1>
+        <img src="./assets/logo.jpeg" alt="logo" class="logo">
+      </div>
+      <div class="menu-toggle" onclick="toggleMenu()"><img src="./assets/menu.jpeg" alt="Menu"></div>
       <nav class="nav-bar">
         <ul>
           <li><a href="./index.html">🏠Home</a></li>
@@ -20,6 +23,8 @@
           <li><a href="./awareness.html">📢Awareness</a></li>
           <li><a href="./services.html">💼Services</a></li>
           <li><a href="./stories.html">📖Stories</a></li>
+          <li><a href="./resources.html">📚Resources</a></li>
+          <li><a href="./FAQ.html">❓FAQ</a></li>
           <li><a href="./contacts.html">📞Contacts</a></li>
         </ul>
       </nav>
@@ -149,5 +154,12 @@
       </div>
     </div>
   </footer>
+<script>
+function toggleMenu() {
+  const nav = document.querySelector('.nav-bar');
+  if (!nav) return;
+  nav.classList.toggle('open');
+}
+</script>
 </body>
 </html>
